@@ -32,7 +32,34 @@ Diseñar la infraestructura del laboratorio SOC antes de iniciar la implementaci
 
 # Topología
 
-(Aquí irá la topología del README)
+# 🌐 Topología
+
+La infraestructura del laboratorio estará compuesta por un firewall FortiGate que actuará como puerta de enlace entre Internet y la red interna del laboratorio.
+
+Todas las máquinas virtuales estarán conectadas a una red LAN interna protegida por FortiGate. Esto permitirá monitorear el tráfico, aplicar políticas de seguridad y centralizar los eventos mediante Wazuh.
+
+```text
+                     Internet
+                         │
+                  Adaptador NAT
+                         │
+                    FortiGate
+                         │
+                  Red Interna SOC
+                         │
+      ┌──────────┬──────────┬──────────┬──────────┐
+      │          │          │          │
+ Ubuntu       Windows    Windows      Kali
+ Wazuh        Server      10          Linux
+```
+
+## Descripción
+
+- **FortiGate** será el firewall del laboratorio y la puerta de enlace hacia Internet.
+- **Ubuntu Server** alojará Wazuh Manager para el monitoreo y análisis de eventos.
+- **Windows Server 2022** funcionará como controlador de dominio y servidor DNS.
+- **Windows 10** será el equipo cliente monitoreado mediante el agente de Wazuh y Sysmon.
+- **Kali Linux** se utilizará para realizar pruebas de seguridad controladas y generar eventos para su análisis.
 
 ---
 
