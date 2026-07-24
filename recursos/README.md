@@ -1,11 +1,10 @@
 # 📖 Recursos
 
-Esta carpeta reúne los recursos necesarios para construir y mantener el laboratorio SOC.
+Esta carpeta contiene información de referencia utilizada durante el desarrollo del laboratorio SOC.
 
-Aquí se documentarán:
+Aquí encontrarás:
 
-- Enlaces oficiales de descarga.
+- Enlaces oficiales de las herramientas.
 - Requisitos de hardware y software.
 - Versiones utilizadas.
-- Recursos recomendados.
-- Documentación oficial de las herramientas.
+- Recursos y documentación oficial.
